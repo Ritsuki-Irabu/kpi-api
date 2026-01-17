@@ -36,6 +36,13 @@
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 
+		<!-- JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+
 		<!-- H2（※ バージョン指定しない） -->
 		<dependency>
 			<groupId>com.h2database</groupId>
