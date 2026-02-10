@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface KPIRecordRepository extends JpaRepository<KPIRecord,Integer> {
+
     List<KPIRecord> findByKpiId(Integer kpiId);
 }
