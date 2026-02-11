@@ -1,11 +1,14 @@
 package com.example.kpiapi.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import java.time.LocalDateTime;
-
 
 @Entity
 @Table(name = "app_users")
+@Data //Getter/Setter/toString等が自動生成される
+@NoArgsConstructor //引数なしコンストラクタを自動生成する
 public class AppUser {
 
     @Id
@@ -18,25 +21,4 @@ public class AppUser {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
-    //--- getter / setter ---
-
-    public Integer getId() {
-        return id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 }

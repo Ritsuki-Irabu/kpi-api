@@ -12,7 +12,6 @@ public class KPIService {
     public final KPIRepository kpiRepository;
 
     public KPIService(KPIRepository kpiRepository) {
-
         this.kpiRepository = kpiRepository;
     }
 

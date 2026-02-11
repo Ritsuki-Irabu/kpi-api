@@ -12,7 +12,6 @@ public class KGIService {
     public final KGIRepository kgiRepository;
 
     public KGIService(KGIRepository kgiRepository) {
-
         this.kgiRepository = kgiRepository;
     }
 
