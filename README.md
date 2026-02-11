@@ -90,8 +90,7 @@ AppUser (ユーザー)
 ## 起動方法
 1. リポジトリをクローンする
    ```bash
-   git clone [https://github.com/your-repository/kpi-api.git](https://github.com/your-repository/kpi-api.git)
-   ```
+   git clone [https://github.com/Ritsuki-Irabu/kpi-api.git](https://github.com/Ritsuki-Irabu/kpi-api.git)
 2. IntelliJ IDEAでプロジェクトを開く
    
 3. application.yml（またはproperties）のDB設定確認
