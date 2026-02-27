@@ -1,6 +1,7 @@
 package com.example.kpiapi.controller;
 
-import com.example.kpiapi.entity.KPI;
+import com.example.kpiapi.dto.kpi.KPIRequest;
+import com.example.kpiapi.dto.kpi.KPIResponse;
 import com.example.kpiapi.service.KPIService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import java.util.List;
 @RequestMapping("/kpi")
 public class KPIController {
 
-    public final KPIService kpiService;
+    private final KPIService kpiService;
 
     public KPIController(KPIService kpiService) {
         this.kpiService = kpiService;
@@ -19,25 +20,25 @@ public class KPIController {
 
     //--KPI作成
     @PostMapping
-    public KPI create(@RequestBody KPI request) {
+    public KPIResponse create(@RequestBody KPIRequest request) {
         return kpiService.create(request);
     }
 
     //--KGIからの取得
     @GetMapping("/kgi/{kgiId}")
-    public List<KPI> findByKgiId(@PathVariable Integer kgiId) {
+    public List<KPIResponse> findByKgiId(@PathVariable Integer kgiId) {
         return kpiService.findByKgiId(kgiId);
     }
 
     //--全て取得
     @GetMapping
-    public List<KPI> findAll() {
+    public List<KPIResponse> findAll() {
         return kpiService.findAll();
     }
 
     //--１件取得
     @GetMapping("/{id}")
-    public KPI getById(@PathVariable Integer id) {
+    public KPIResponse getById(@PathVariable Integer id) {
         return kpiService.findById(id);
     }
 

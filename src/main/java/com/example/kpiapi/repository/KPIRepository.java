@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface KPIRepository extends JpaRepository<KPI,Integer> {
 
-    List<KPI> findByKgiId(Integer kgiId);
+    List<KPI> findByKgi_Id(Integer kgiId);
 }

@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface KGIRepository extends JpaRepository<KGI,Integer> {
 
-    List<KGI> findByUserId(Integer userId);
+    List<KGI> findByUser_Id(Integer userId);
 }
